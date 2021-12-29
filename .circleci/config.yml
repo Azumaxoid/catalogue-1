@@ -27,7 +27,7 @@ jobs:
             -H "Api-Key:$NEW_RELIC_API_KEY" -H "Content-Type: application/json" -d '{"deployment": {"revision": "'`git rev-parse HEAD`'","user": "Auto Deploy","timestamp": "'`date +'%Y-%m-%dT%H:%M:%S'Z`'"}}'
       - run:
           command: |
-            kubectl -n sock-shop-nr rollout restart deploy catalogue
+            kubectl -n sock-shop-nr rollout restart deploy catalogue-1
           name: Test cluster
 orbs:
   docker: circleci/docker@1.7.0
