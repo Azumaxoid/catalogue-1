@@ -1,3 +1,4 @@
+#コメントテスト
 module Service
   extend ActiveSupport::Concern
   class_methods do
