@@ -11,6 +11,7 @@ class SocksSelector
   def call
     @socks = [];
     if @tags.length > 0
+      @tags = @tags.split(",")
       @socks = Sock.all.filter {
         |sock| @tags.find { |tag| tag == Tag.find(SockTag.find_by(sock_id: sock.sock_id).tag_id).name }
       }
