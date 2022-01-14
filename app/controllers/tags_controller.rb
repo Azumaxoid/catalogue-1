@@ -3,6 +3,5 @@ class TagsController < ApplicationController
   def index
     @tags = TagSelector.call
     render json: { "tags": @tags }
-  #  render json: {tags: [{name:”hoge”, count: 10}]}
   end
 end
