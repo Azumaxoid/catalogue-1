@@ -1,6 +1,7 @@
 class TagSelector
   include Service
 
+  # コメント追加
   def index
     @tags = Tag.all.map{|tag| tag.name}
     # Green socks tag have a bug so filtered
