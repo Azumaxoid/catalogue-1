@@ -1,7 +1,7 @@
 class TagSelector
   include Service
 
-  # Codestreamの動きを確認するための変更
+  # Codestreamの動きを確認するための変更の変更
   def index
     @tags = Tag.all.map{|tag| tag.name}
     # Green socks tag have a bug so filtered
